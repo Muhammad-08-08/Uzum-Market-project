@@ -20,7 +20,7 @@ function Header() {
         Buyurtmangizni 1 kunda bepul yetkazib beramiz!
       </p>
       <div className="flex items-center gap-4">
-        <Link to={"/savolJavoblar"}>
+        <Link to={"/savol_javoblar"}>
           <p>Savol-javoblar</p>
         </Link>
         <p>Buyurtmalarim</p>
