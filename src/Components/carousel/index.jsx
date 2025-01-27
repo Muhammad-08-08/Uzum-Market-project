@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import uzum_carousel from "../../assets/uzum_carousel.png";
 import uzum_carousel1 from "../../assets/uzum_market_img1.png";
 import uzum_carousel2 from "../../assets/uzum_market_img2.png";
@@ -24,15 +24,23 @@ function Carousel() {
     },
   ];
 
-  const ong = () => {
-    if (carousel < imgs.length - 1) {
-      setCarousel(carousel + 1);
-    }
-  };
+  useEffect(() => {
+    const carousel_vaqti = setInterval(() => {
+      setCarousel((prev) => (prev < imgs.length - 1 ? prev + 1 : 0));
+    }, 3000);
+
+    return () => clearInterval(carousel_vaqti);
+  }, [imgs.length]);
 
   const chap = () => {
     if (carousel > 0) {
       setCarousel(carousel - 1);
+    }
+  };
+
+  const ong = () => {
+    if (carousel < imgs.length - 1) {
+      setCarousel(carousel + 1);
     }
   };
 
@@ -65,6 +73,7 @@ function Carousel() {
         {imgs.map((item, index) => {
           return (
             <img
+              key={index}
               onClick={() => {
                 setCarousel(index);
               }}

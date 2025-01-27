@@ -1,14 +1,11 @@
-import Header from "./Components/header";
-import Navbar from "./Components/navbar";
-import OsonQidiruv from "./Components/oson_qidiruv";
-import Carousel from "./Components/carousel";
-import ArzonNarxlar from "./Components/arzon_narxlar";
-import Elektronika from "./Components/elektronika";
-import OshxanaUchunTexnika from "./Components/oshxona_uchun_texnika";
-import MuddatliTolovReklamasi from "./Components/muddatli_tolov_img";
-import MuddatliTolov from "./Components/muddatli_tolov";
-import IssiqTexnikaReklamasi from "./Components/issiq_texnika_reklamasi";
-import IssiqTexnika from "./Components/issiq_texnika";
+import Header from "./components/header/index";
+import Navbar from "./components/navbar/index";
+import OsonQidiruv from "./components/oson_qidiruv/index";
+import ProductDetail from "./components/productPage/index";
+import Home from "./components/home";
+import SavolJavoblar from "./components/savol_javoblar";
+import MenHaqimda from "./components/men_haqimda";
+import { Routes, Route } from "react-router";
 
 function App() {
   return (
@@ -16,14 +13,12 @@ function App() {
       <Header />
       <Navbar />
       <OsonQidiruv />
-      <Carousel />
-      <ArzonNarxlar />
-      <Elektronika />
-      <OshxanaUchunTexnika />
-      <MuddatliTolovReklamasi />
-      <MuddatliTolov />
-      <IssiqTexnikaReklamasi />
-      <IssiqTexnika />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/savolJavoblar" element={<SavolJavoblar />} />
+        <Route path="/menHaqimda" element={<MenHaqimda />} />
+      </Routes>
     </div>
   );
 }
