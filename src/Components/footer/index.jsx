@@ -38,23 +38,44 @@ function Footer() {
         <div className="flex flex-col gap-2">
           <h4 className="font-medium text-lg">Ilovani yuklab olish</h4>
           <div className="flex gap-2">
-            <img
-              className="w-36"
-              src="https://book.uz/static/media/AppStore.7eb91760005327d07c10321a5258574e.svg"
-              alt="AppStore"
-            />
-            <img
-              className="w-36"
-              src="https://book.uz/static/media/GooglePlay.c97382e2ca2ba4dc04a60bd6e146db1d.svg"
-              alt="Play Market"
-            />
+            <a
+              href="https://apps.apple.com/ru/app/uzum-market-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD/id1640483056"
+              target="_blank"
+            >
+              <img
+                className="w-36"
+                src="https://book.uz/static/media/AppStore.7eb91760005327d07c10321a5258574e.svg"
+                alt="AppStore"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=uz.uzum.app"
+              target="_blank"
+            >
+              <img
+                className="w-36"
+                src="https://book.uz/static/media/GooglePlay.c97382e2ca2ba4dc04a60bd6e146db1d.svg"
+                alt="Play Market"
+              />
+            </a>
           </div>
           <h4 className="font-medium text-lg">Uzum ijtimoiy tarmoqlarda</h4>
           <div className="flex gap-3">
-            <img src={instagram} alt="instagram" />
-            <img src={telegram} alt="telegram" />
-            <img src={youtube} alt="youtube" />
-            <img src={facebook} alt="facebook" />
+            <a href="https://www.instagram.com/uzum.market" target="_blank">
+              <img src={instagram} alt="instagram" />
+            </a>
+            <a href="https://t.me/uzum_market" target="_blank">
+              <img src={telegram} alt="telegram" />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCY3nNF2MUDKHrELA6LzbnHA"
+              target="_blank"
+            >
+              <img src={youtube} alt="youtube" />
+            </a>
+            <a href="https://www.facebook.com/uzummarket" target="_blank">
+              <img src={facebook} alt="facebook" />
+            </a>
           </div>
         </div>
       </div>
